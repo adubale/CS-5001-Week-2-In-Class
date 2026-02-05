@@ -43,7 +43,7 @@ def rgb_to_hsv(r, g, b):
     elif mx == b:
         h = (60.0 * ((r - g) / df) + 240.0) % 360.0
 
-    s = 0.0 if mx == 0 else (df / mx) * 100.0
+    s = 0.0 if mx == 0.0 else (df / mx) * 100.0
     v = mx * 100.0
 
     return (h, s, v)
@@ -54,7 +54,7 @@ def rgb_to_hsv(r, g, b):
 - Maintained exact mathematical formulas for hue calculation
 - Ensured all intermediate calculations use float division
 - Kept return type as tuple (h, s, v) with exact order
-- Handled edge case where mx=0 for saturation calculation
-- Used modulo operation to keep hue within 0-360 range
+- Handled edge case where mx == mn (grayscale) explicitly
+- Used modulo operation to ensure hue stays within 0-360 range
 - Maintained original function signature and name
 - All calculations performed with sufficient precision for 15 decimal places

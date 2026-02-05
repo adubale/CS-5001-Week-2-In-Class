@@ -37,9 +37,10 @@ def count_Hexadecimal(L, R):
 
 - Maintained the exact logic and behavior of the original function
 - Improved readability with consistent indentation and spacing
-- Preserved the precise counting mechanism for hexadecimal digits
-- Handled edge cases implicitly through the range-based loop
-- Ensured the function returns the correct count for all valid inputs
-- Kept the same variable names to maintain consistency with tests
+- Preserved the same variable names and function signature
+- Kept the same edge case handling (numbers 10-15 and numbers >15)
+- Ensured the same counting mechanism for hexadecimal digits
 - No changes to the mathematical operations or conditions
-- Function signature remains unchanged as required
+- The function still returns the same count value for all inputs
+- All test cases should pass exactly as before
+- No additional functionality or side effects introduced

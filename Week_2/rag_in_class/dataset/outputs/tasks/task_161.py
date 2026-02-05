@@ -7,6 +7,5 @@ def remove_elements(list1, list2):
 
     Returns:
         A new list containing elements from list1 that are not in list2.
-        Preserves order and handles duplicates in list2 correctly.
     """
     return [x for x in list1 if x not in list2]

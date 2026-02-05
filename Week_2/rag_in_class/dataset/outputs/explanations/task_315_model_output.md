@@ -57,13 +57,13 @@ def find_Max_Len_Even(str):
     return str[st:st + maxlen]
 ```
 
-- Maintained the exact logic and behavior of the original function
-- Improved code readability with consistent indentation and spacing
+- Maintained the exact logic and structure of the original function
+- Improved readability with consistent indentation and spacing
 - Preserved all edge case handling (empty strings, no even-length words)
-- Kept the same return type and values ("-1" for no match, substring otherwise)
+- Kept the same return behavior ("-1" for no even-length words)
 - Ensured the function still processes strings character by character
 - Maintained the same variable naming for clarity
-- Kept the while loop structure identical to original
-- Preserved the final check for even-length words after loop ends
-- Ensured the substring extraction logic remains unchanged
-- Maintained the exact same return conditions and values
+- Kept the same algorithm for tracking current and maximum lengths
+- Preserved the exact same return value format
+- Ensured the function handles spaces and word boundaries identically
+- Maintained the same performance characteristics (O(n) time complexity)

@@ -35,9 +35,9 @@ def frequency_Of_Largest(n, arr):
 
 - Explicitly handle empty input case (n == 0) by returning 0
 - Use more descriptive variable names (max_val instead of mn, frequency instead of freq)
-- Maintain the same logic flow but with improved readability
-- Preserve the exact behavior validated by the provided tests
-- Keep the function signature unchanged as required
-- Ensure the function works correctly for single-element inputs
-- Maintain the original time complexity O(n) with single pass through the array
-- Preserve the exact return value behavior for all edge cases
+- Maintain the same logic flow and behavior as original implementation
+- Preserve exact return value behavior (count of maximum value occurrences)
+- Keep the same time complexity (O(n)) and space complexity (O(1))
+- Ensure the function works correctly with single-element arrays
+- Maintain the same parameter order and function signature
+- Preserve the exact same return type (integer)

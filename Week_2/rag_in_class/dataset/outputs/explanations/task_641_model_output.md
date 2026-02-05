@@ -16,9 +16,9 @@ def is_nonagonal(n):
 ```
 
 - The function `is_nonagonal` calculates the nth nonagonal number using the exact formula provided in the problem statement.
-- The formula `n * (7 * n - 5) / 2` is implemented precisely to ensure correct results for all integer inputs.
-- The result is cast to an integer to match the expected output type, as nonagonal numbers are always integers.
-- Edge cases such as `n = 0` and negative values are handled naturally by the formula, returning `0` and negative values respectively.
-- The function is concise and directly maps to the mathematical definition, ensuring clarity and maintainability.
-- No intermediate validations are needed as the formula is mathematically sound and the input is assumed to be an integer.
+- The formula `n * (7 * n - 5) / 2` is implemented precisely to ensure mathematical consistency.
+- The result is converted to an integer to match the expected output type.
+- Edge cases such as `n = 0` are handled naturally by the formula, returning `0`.
+- The function is concise and directly maps to the mathematical definition of nonagonal numbers.
+- No intermediate validations are needed as the formula is straightforward and deterministic.
 - The function preserves the exact behavior required by the tests, including precision and return type.

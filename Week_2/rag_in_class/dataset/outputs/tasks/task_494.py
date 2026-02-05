@@ -2,10 +2,10 @@ def binary_to_integer(test_tup):
     """Convert a tuple of binary digits to an integer string.
 
     Args:
-        test_tup: Tuple of 0s and 1s representing binary digits.
+        test_tup: Tuple of binary digits (0s and 1s)
 
     Returns:
-        String representation of the integer value of the binary tuple.
+        String representation of the integer value
     """
     if not test_tup:
         return "0"

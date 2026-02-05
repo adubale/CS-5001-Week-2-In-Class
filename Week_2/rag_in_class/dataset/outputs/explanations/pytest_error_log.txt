@@ -1,4 +1,4 @@
-.F..F..............F.F....F.........F...                                 [100%]
+.F..F..............F.F..............F...                                 [100%]
 =================================== FAILURES ===================================
 ______________________________ test_mbpp_asserts _______________________________
 
@@ -36,32 +36,6 @@ tests/test_task_461.py:4: AssertionError
 ______________________________ test_mbpp_asserts _______________________________
 
     def test_mbpp_asserts():
->       assert parallel_lines([2,3,4], [2,3,8]) == True
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-tests/test_task_525.py:4: 
-_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-
-line1 = [2, 3, 4], line2 = [2, 3, 8]
-
-    def parallel_lines(line1, line2):
-        """Check if two lines are parallel by comparing their slopes.
-    
-        Args:
-            line1: Tuple of (m1, b1) representing line equation y = m1*x + b1
-            line2: Tuple of (m2, b2) representing line equation y = m2*x + b2
-    
-        Returns:
-            bool: True if lines are parallel (slopes are equal), False otherwise
-        """
->       m1, b1 = line1
-        ^^^^^^
-E       ValueError: too many values to unpack (expected 2)
-
-tasks/task_525.py:11: ValueError
-______________________________ test_mbpp_asserts _______________________________
-
-    def test_mbpp_asserts():
 >       assert parallelogram_perimeter(10,20)==400
 E       assert 60 == 400
 E        +  where 60 = parallelogram_perimeter(10, 20)
@@ -72,5 +46,4 @@ FAILED tests/test_task_101.py::test_mbpp_asserts - assert 5 == 3
 FAILED tests/test_task_124.py::test_mbpp_asserts - assert 3.141592653589793 =...
 FAILED tests/test_task_431.py::test_mbpp_asserts - assert False == None
 FAILED tests/test_task_461.py::test_mbpp_asserts - AssertionError: assert 2 == 1
-FAILED tests/test_task_525.py::test_mbpp_asserts - ValueError: too many value...
 FAILED tests/test_task_882.py::test_mbpp_asserts - assert 60 == 400

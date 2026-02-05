@@ -19,8 +19,9 @@ def digit_distance_nums(n1, n2):
 
 - Preserved the exact behavior of the original function
 - Improved readability by breaking down the calculation into clear steps
-- Used a generator expression for memory efficiency with large numbers
-- Maintained the same return type (integer) and calculation logic
+- Used a generator expression for the digit sum instead of `map` for better readability
+- Maintained the same return type and value for all inputs
 - Handled edge cases implicitly (works with negative numbers, zero, etc.)
-- No external dependencies or complex operations added
+- No floating-point operations involved, so precision requirements are trivially met
+- The function remains pure and stateless
 - Follows Python best practices for simple mathematical operations

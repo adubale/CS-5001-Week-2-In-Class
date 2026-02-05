@@ -21,16 +21,13 @@ def remove_elements(list1, list2):
 
     Returns:
         A new list containing elements from list1 that are not in list2.
-        Preserves order and handles duplicates in list2 correctly.
     """
     return [x for x in list1 if x not in list2]
 ```
 
 - Preserved the exact list comprehension logic for clarity and performance
-- Added docstring to clarify behavior and edge case handling
-- Maintained original function signature and return type
-- Handles empty inputs and duplicates in list2 as specified
-- No intermediate variables needed for this simple operation
-- Follows Pythonic list filtering pattern
-- No floating-point operations or mathematical formulas involved
-- Return type is always a list, matching test expectations
+- Added docstring to clarify function purpose and parameters
+- Maintained the original behavior of returning a new list without modifying inputs
+- Handled edge cases implicitly (empty lists, duplicates in list2) through the list comprehension
+- Ensured the function returns a list as expected by the tests
+- No unnecessary changes to maintain exact test compatibility

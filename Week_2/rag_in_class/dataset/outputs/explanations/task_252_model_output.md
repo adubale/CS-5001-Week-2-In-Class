@@ -21,11 +21,11 @@ def convert(numbers):
     return (magnitude, angle)
 ```
 
-- Preserved the exact behavior of the original function by using `cmath.polar` for precise conversion
-- Ensured floating-point precision is maintained by not applying any rounding
-- Handled edge cases implicitly (e.g., zero input returns (0.0, 0.0))
-- Maintained the exact return type (tuple of (float, float))
-- No unnecessary modifications to avoid altering the tested behavior
-- Kept the function signature identical to the original
-- Used exact mathematical conversion from complex to polar coordinates
-- Validated that the function works for all complex number inputs as per the test cases
+- Preserved the exact behavior of the original function by using `cmath.polar` for conversion
+- Improved readability by explicitly unpacking the tuple returned by `cmath.polar`
+- Maintained the same return type (tuple of (magnitude, angle))
+- Ensured floating-point precision is handled by `cmath.polar` (which uses exact calculations)
+- Kept the function signature identical to avoid breaking existing code
+- Added a docstring to clarify the function's purpose
+- No edge cases to handle as `cmath.polar` works for all complex numbers
+- Return order matches the expected output (magnitude first, then angle)

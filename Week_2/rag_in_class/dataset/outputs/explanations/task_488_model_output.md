@@ -28,16 +28,17 @@ def area_pentagon(a):
     if a <= 0:
         return 0.0
 
-    # Calculate area using exact formula: (sqrt(5*(5+2*sqrt(5)))*a^2)/4
-    # Using math.sqrt for precision and pow(a, 2) for squaring
+    # Calculate area using exact formula: (sqrt(5*(5+2*sqrt(5))) * a^2) / 4
+    # Using math.sqrt for precision and pow(a, 2) for exact squaring
     area = (math.sqrt(5 * (5 + 2 * math.sqrt(5))) * pow(a, 2)) / 4.0
     return area
 ```
 
-- Preserved exact mathematical formula for pentagon area calculation
+- Preserved exact mathematical formula from original implementation
 - Added input validation for non-positive side lengths
-- Maintained precision to at least 15 decimal places using math.sqrt
+- Maintained floating-point precision using math.sqrt and pow
 - Added docstring for clarity
-- Kept function signature unchanged
-- Used pow(a, 2) instead of a**2 for consistency with original implementation
-- Return type remains float as in original implementation
+- Kept function name and signature unchanged
+- Ensured return type is float as in original
+- Formula uses exact multiplication and division as specified
+- No rounding applied to maintain precision

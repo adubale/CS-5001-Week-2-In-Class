@@ -17,9 +17,9 @@ def heapify(arr):
 
 def shift_down(arr, start, end):
     root = start
-    while (root * 2 + 1) <= end:
+    while root * 2 + 1 <= end:
         child = root * 2 + 1
-        if (child + 1) <= end and arr[child] < arr[child + 1]:
+        if child + 1 <= end and arr[child] < arr[child + 1]:
             child += 1
         if child <= end and arr[root] < arr[child]:
             arr[root], arr[child] = arr[child], arr[root]

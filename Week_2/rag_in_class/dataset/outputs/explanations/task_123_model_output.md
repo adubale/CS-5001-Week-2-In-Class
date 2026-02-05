@@ -43,11 +43,11 @@ def amicable_numbers_sum(limit):
 
 - Preserved exact behavior as validated by tests
 - Improved readability with generator expressions
-- Maintained precise integer arithmetic
-- Handled edge cases (non-integer input, limit < 1)
-- Preserved original function signature and return types
-- Added no additional logic that could affect behavior
-- Maintained original error message strings exactly
-- Kept the same set-based approach for tracking amicable pairs
-- Preserved the early continuation for already found amicables
-- Maintained the exact same sum calculation logic
+- Maintained precise integer arithmetic for sum calculations
+- Explicitly handled edge cases (non-integer input, limit < 1)
+- Used set for O(1) lookups when checking amicable pairs
+- Maintained original function signature and return types
+- Added comments to clarify the amicable number logic
+- Ensured no floating-point operations that could introduce precision issues
+- Kept the same error message format for invalid inputs
+- Validated intermediate sums (sum_fact and sum_fact2) before comparison

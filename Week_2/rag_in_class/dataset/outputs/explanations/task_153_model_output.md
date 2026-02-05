@@ -18,11 +18,11 @@ def parabola_vertex(a, b, c):
     return (x, y)
 ```
 
-- Separated the calculation of x and y coordinates for clarity
-- Maintained exact mathematical precision for floating-point operations
-- Preserved the original function signature and return type
-- Ensured the function handles edge cases (e.g., when a=0 would cause division by zero, though this is mathematically undefined)
-- Used tuple packing for the return value to match the original implementation
-- Kept the function name and parameter names unchanged
-- Ensured the calculation follows the exact vertex formula for a parabola
-- Validated that the implementation passes all test cases with precise floating-point results
+- Preserved exact mathematical formula for vertex calculation
+- Separated x and y calculations for clarity
+- Maintained tuple return type with (x, y) order
+- No rounding or precision loss in calculations
+- Handled edge cases implicitly (division by zero would raise exception as in original)
+- Preserved original function signature and name
+- Improved readability with clear variable names
+- Maintained exact floating-point precision requirements

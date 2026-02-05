@@ -7,9 +7,6 @@ def even_bit_toggle_number(n):
     Returns:
         Integer with even-positioned bits toggled
     """
-    if n == 0:
-        return 0
-
     res = 0
     count = 0
     temp = n

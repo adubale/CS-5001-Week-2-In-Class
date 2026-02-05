@@ -26,9 +26,6 @@ def even_bit_toggle_number(n):
     Returns:
         Integer with even-positioned bits toggled
     """
-    if n == 0:
-        return 0
-
     res = 0
     count = 0
     temp = n
@@ -42,11 +39,10 @@ def even_bit_toggle_number(n):
     return n ^ res
 ```
 
-- Maintained exact bit manipulation logic while improving readability
-- Added explicit handling for n=0 edge case
-- Improved variable naming and spacing for clarity
-- Preserved original bit toggling behavior exactly
-- Kept the same function signature and return type
-- Added docstring for documentation
-- Ensured bit operations remain precise with no rounding
-- Maintained the same control flow and logic structure
+- Maintained exact same logic and behavior as original
+- Improved code formatting and readability
+- Added docstring explaining function purpose
+- Preserved all edge case handling (works for n=0, negative numbers, etc.)
+- Kept bit manipulation operations identical
+- No changes to return type or value calculation
+- Ensured precision is maintained (bit operations are exact)

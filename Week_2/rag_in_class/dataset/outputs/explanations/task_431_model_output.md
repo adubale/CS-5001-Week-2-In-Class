@@ -18,11 +18,20 @@ def common_element(list1, list2):
 ```python
 def common_element(list1, list2):
     """Check if there is any common element between two lists."""
-    return any(x in list2 for x in list1)
+    for x in list1:
+        for y in list2:
+            if x == y:
+                return True
+    return False
 ```
 
-- Preserved the exact behavior of returning `True` if any common element exists, `False` otherwise
-- Replaced nested loops with a more efficient and readable generator expression using `any()`
-- Maintained the same return type (boolean) as the original implementation
-- Handled edge cases implicitly (empty lists, single-element lists) through the `any()` function
-- No changes to function signature or name as per requirements
+- Preserved the exact behavior of returning `True` as soon as a common element is found
+- Simplified the logic by removing the unnecessary `result` variable
+- Maintained the nested loop structure to match the original implementation
+- Kept the function signature and return type unchanged
+- Ensured the function returns `False` only after checking all elements
+- No changes to the control flow or comparison logic
+- The function still handles empty lists correctly (returns `False`)
+- Maintained the same time complexity (O(n*m)) as the original
+- No additional edge cases introduced or removed
+- The function still works with any hashable types for comparison

@@ -13,7 +13,7 @@ def rgb_to_hsv(r, g, b):
     elif mx == b:
         h = (60.0 * ((r - g) / df) + 240.0) % 360.0
 
-    s = 0.0 if mx == 0 else (df / mx) * 100.0
+    s = 0.0 if mx == 0.0 else (df / mx) * 100.0
     v = mx * 100.0
 
     return (h, s, v)

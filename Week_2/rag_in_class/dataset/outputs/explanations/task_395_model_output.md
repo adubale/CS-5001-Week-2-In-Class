@@ -41,11 +41,11 @@ def first_non_repeating_character(str1):
     return None
 ```
 
-- Maintained the exact function signature and behavior as required
-- Improved variable naming for clarity (e.g., `ctr` → `char_count`)
-- Preserved the original logic flow while making the code more readable
-- Handled edge cases implicitly (empty string returns None, all repeating characters returns None)
-- Maintained the same return type (char or None) as specified
-- Kept the same time complexity (O(n)) and space complexity (O(n))
+- Preserved the exact logic and behavior of the original function
+- Improved variable naming for clarity (ctr → char_count)
+- Maintained the same return type (char or None)
+- Kept the same order of operations to ensure identical results
+- No changes to edge case handling (empty string returns None, all repeating returns None)
+- Preserved the original function signature and name
 - Added a docstring to clarify the function's purpose
-- Preserved the exact behavior validated by the provided tests
+- No changes to the algorithm's time complexity (O(n) time and space)

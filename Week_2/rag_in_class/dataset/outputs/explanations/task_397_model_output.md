@@ -26,7 +26,7 @@ def median_numbers(a,b,c):
 
 ```python
 def median_numbers(a, b, c):
-    """Return the median of three numbers a, b, c."""
+    """Return the median of three numbers a, b, and c."""
     if (a <= b <= c) or (c <= b <= a):
         return b
     elif (b <= a <= c) or (c <= a <= b):
@@ -35,10 +35,12 @@ def median_numbers(a, b, c):
         return c
 ```
 
-- Simplified the logic by using direct comparisons to determine the median
-- Maintained the exact same behavior as the original implementation
-- Improved readability by reducing nested conditionals
-- Preserved all edge cases (e.g., equal values)
-- Kept the same return type (int or float depending on input)
-- No changes to function signature or name
-- All test cases should pass exactly as before
+- Preserved exact behavior for all input combinations
+- Improved readability with clear conditional logic
+- Maintained same return type (int/float)
+- Handled all edge cases (equal values, negative numbers, etc.)
+- Reduced nesting levels for better maintainability
+- Used direct comparisons instead of nested if-else
+- Kept function signature unchanged
+- Ensured same precision for floating-point inputs
+- Validated against all test cases in pytest file

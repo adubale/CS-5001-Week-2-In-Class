@@ -23,18 +23,17 @@ def remove_column(list1, n):
     Returns:
         The modified list with the nth column removed from each sublist.
     """
-    if not list1:
-        return list1
-    for row in list1:
-        if n < len(row):
-            del row[n]
+    for sublist in list1:
+        if n < len(sublist):
+            del sublist[n]
     return list1
 ```
 
-- Preserved the exact function signature and behavior as required
-- Added input validation for empty lists
-- Added bounds checking for column index to prevent IndexError
-- Improved readability with clear docstring and variable naming
-- Maintained the in-place modification behavior of the original
-- Handled edge cases where n might be out of bounds for some rows
-- Kept the same return type (modified list) as the original implementation
+- Preserved the exact behavior of removing the nth column from each sublist
+- Added explicit handling for cases where n is out of bounds for a sublist
+- Improved readability with a clear docstring and variable naming
+- Maintained the in-place modification of the input list
+- Ensured the function works correctly with empty sublists or when the list of elements to remove is empty
+- No changes to the function signature or return type
+- Added validation for the column index to prevent IndexError
+- The function still returns the modified list as required

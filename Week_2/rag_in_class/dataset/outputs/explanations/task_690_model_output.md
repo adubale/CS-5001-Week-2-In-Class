@@ -13,23 +13,32 @@ def mul_consecutive_nums(nums):
 
 ```python
 def mul_consecutive_nums(nums):
-    """Multiply each pair of consecutive numbers in the input list.
+    """Multiply each element with the next consecutive element in the list.
 
     Args:
         nums: List of numbers (int or float)
 
     Returns:
-        List of products of consecutive pairs. Returns empty list if input has 0 or 1 elements.
+        List of products where each element is the product of consecutive pairs
+        from the input list. Returns empty list if input has 0 or 1 elements.
+
+    Examples:
+        >>> mul_consecutive_nums([1, 2, 3, 4])
+        [2, 6, 12]
+        >>> mul_consecutive_nums([5])
+        []
+        >>> mul_consecutive_nums([])
+        []
     """
     if len(nums) < 2:
         return []
-    return [a * b for a, b in zip(nums[:-1], nums[1:])]
+    return [b * a for a, b in zip(nums[:-1], nums[1:])]
 ```
 
 - Preserved exact behavior with list comprehension for consecutive multiplication
-- Added explicit edge case handling for lists with < 2 elements
+- Added explicit edge case handling for empty and single-element inputs
 - Maintained original function signature and name
-- Improved readability with docstring explaining behavior
-- Kept the same return type (list) and calculation method
-- No floating-point precision issues as multiplication is exact
-- Handles empty list and single-element list cases correctly
+- Added docstring with clear examples and behavior description
+- Used precise multiplication operation without rounding
+- Kept the same return type (list) and structure
+- No changes to core logic to ensure test compatibility

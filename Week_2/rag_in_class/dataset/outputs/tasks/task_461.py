@@ -1,6 +1,6 @@
 def upper_ctr(str):
     upper_ctr = 0
-    for char in str:
-        if 'A' <= char <= 'Z':
+    for i in range(len(str)):
+        if str[i] >= 'A' and str[i] <= 'Z':
             upper_ctr += 1
     return upper_ctr

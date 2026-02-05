@@ -8,9 +8,7 @@ def remove_column(list1, n):
     Returns:
         The modified list with the nth column removed from each sublist.
     """
-    if not list1:
-        return list1
-    for row in list1:
-        if n < len(row):
-            del row[n]
+    for sublist in list1:
+        if n < len(sublist):
+            del sublist[n]
     return list1

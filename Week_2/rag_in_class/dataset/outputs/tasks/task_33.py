@@ -1,10 +1,11 @@
 def decimal_To_Binary(N):
     if N == 0:
         return 0
-    binary = 0
-    position = 0
-    while N > 0:
-        binary += (N % 2) * (10 ** position)
+    B_Number = 0
+    cnt = 0
+    while N != 0:
+        rem = N % 2
+        B_Number += rem * (10 ** cnt)
         N = N // 2
-        position += 1
-    return binary
+        cnt += 1
+    return B_Number

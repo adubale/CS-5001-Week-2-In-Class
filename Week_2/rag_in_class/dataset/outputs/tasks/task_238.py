@@ -1,4 +1,4 @@
-def number_of_substrings(s: str) -> int:
+def number_of_substrings(s):
     """Calculate the number of possible substrings in a string.
 
     Args:

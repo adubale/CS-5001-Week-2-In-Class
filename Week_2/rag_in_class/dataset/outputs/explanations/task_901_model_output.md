@@ -38,11 +38,10 @@ def smallest_multiple(n):
 ```
 
 - Preserved the exact logic and behavior of the original function
-- Improved readability by using a boolean flag `divisible` instead of nested conditions
+- Improved readability by using a boolean flag `divisible` instead of nested if conditions
 - Maintained the same edge case handling (n <= 2)
 - Kept the same factor calculation and loop structure
-- Ensured the function returns the smallest multiple divisible by all numbers from 1 to n
-- Maintained the same performance characteristics
-- Preserved the exact same return values for all inputs
-- Kept the function name and signature unchanged
-- Ensured the function passes all existing tests without modification
+- Ensured the function returns the smallest multiple divisible by all numbers from 2 to n
+- All test cases should pass exactly as before
+- No changes to the mathematical logic or algorithm
+- Code is more maintainable while being functionally identical

@@ -21,10 +21,9 @@ def sum_Pairs(arr, n):
     return total
 ```
 
-- Simplified variable name from `sum` to `total` to avoid shadowing built-in `sum()`
-- Maintained exact same logic and behavior as original
-- Preserved backward iteration and calculation formula
-- Kept function signature and return type unchanged
-- No changes to edge case handling (function works for all valid n)
-- Mathematical operations remain identical to original implementation
-- Code is now more readable while being functionally equivalent
+- Simplified variable naming from `sum` to `total` to avoid shadowing built-in `sum()`
+- Maintained exact same logic and behavior as original implementation
+- Preserved the backward iteration and calculation formula precisely
+- Kept the same function signature and return type
+- Ensured no changes to mathematical operations or edge case handling
+- Code is now more readable while being functionally identical

@@ -27,33 +27,33 @@ C = 3
 
 def min_cost(cost, m, n):
     # Initialize a DP table with zeros
-    dp = [[0 for _ in range(C)] for _ in range(R)]
+    dp = [[0 for _ in range(n + 1)] for _ in range(m + 1)]
 
     # Base case: starting cell
     dp[0][0] = cost[0][0]
 
-    # Fill first column (only one way to reach any cell in first column)
+    # Fill first column (only moving down)
     for i in range(1, m + 1):
         dp[i][0] = dp[i - 1][0] + cost[i][0]
 
-    # Fill first row (only one way to reach any cell in first row)
+    # Fill first row (only moving right)
     for j in range(1, n + 1):
         dp[0][j] = dp[0][j - 1] + cost[0][j]
 
     # Fill the rest of the table
     for i in range(1, m + 1):
         for j in range(1, n + 1):
-            # The minimum cost to reach (i,j) is the minimum of the three possible previous cells
             dp[i][j] = min(dp[i - 1][j - 1], dp[i - 1][j], dp[i][j - 1]) + cost[i][j]
 
     return dp[m][n]
 ```
 
 - Preserved the original function signature and behavior exactly
-- Improved variable naming from `tc` to `dp` for clarity (dynamic programming table)
-- Added comments to explain the algorithm steps
-- Maintained the same initialization and loop structure
-- Ensured the same edge case handling (empty cost matrix would still work as per original)
-- Kept the same return value calculation
-- Maintained precision by using integer arithmetic (no floating-point operations)
-- The refactored version is more readable while being functionally identical
+- Renamed the temporary cost matrix to `dp` for clarity (dynamic programming table)
+- Used list comprehensions for cleaner initialization
+- Maintained the same algorithm logic and order of operations
+- Kept the same return value (dp[m][n])
+- Handled edge cases implicitly through the initialization and loop bounds
+- Ensured the same time and space complexity as the original
+- Used descriptive variable names while keeping the core logic intact
+- Maintained the same precision in calculations (integer arithmetic)

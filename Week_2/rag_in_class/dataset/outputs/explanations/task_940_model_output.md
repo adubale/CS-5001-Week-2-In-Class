@@ -53,9 +53,9 @@ def heapify(arr):
 
 def shift_down(arr, start, end):
     root = start
-    while (root * 2 + 1) <= end:
+    while root * 2 + 1 <= end:
         child = root * 2 + 1
-        if (child + 1) <= end and arr[child] < arr[child + 1]:
+        if child + 1 <= end and arr[child] < arr[child + 1]:
             child += 1
         if child <= end and arr[root] < arr[child]:
             arr[root], arr[child] = arr[child], arr[root]
@@ -65,11 +65,11 @@ def shift_down(arr, start, end):
 ```
 
 - Added explicit handling for empty input in `heap_sort`
-- Fixed the initial `start` calculation in `heapify` to use integer division correctly
-- Replaced `return` with `break` in `shift_down` for clarity and consistency
-- Maintained the exact same algorithm and behavior as the original implementation
-- Ensured all floating-point operations (none in this case) would be precise to 15 decimal places
-- Preserved the original function names and signatures exactly
-- Added proper indentation and spacing for better readability
-- Maintained the same variable names for consistency with the original code
-- Ensured the heap sort implementation follows the standard algorithm exactly
+- Fixed the `start` calculation in `heapify` to use integer division correctly
+- Replaced `return` with `break` in `shift_down` for clarity
+- Maintained all existing functionality and behavior
+- Ensured all operations preserve the exact sorting behavior
+- Kept the same function signatures and return types
+- Improved code readability with consistent indentation and spacing
+- Maintained the same algorithmic complexity and behavior
+- Preserved all edge case handling from the original implementation
