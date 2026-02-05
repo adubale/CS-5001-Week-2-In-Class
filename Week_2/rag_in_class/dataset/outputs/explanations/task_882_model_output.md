@@ -12,24 +12,23 @@ def parallelogram_perimeter(b,h):
 ## Refactored Code:
 
 ```python
-def parallelogram_perimeter(base, height):
-    """Calculate the perimeter of a parallelogram given its base and height.
+def parallelogram_perimeter(b, h):
+    """Calculate the perimeter of a parallelogram given base and height.
 
     Args:
-        base: Length of the base of the parallelogram.
-        height: Height of the parallelogram.
+        b: Base length of the parallelogram
+        h: Height of the parallelogram
 
     Returns:
-        The perimeter of the parallelogram.
+        The perimeter of the parallelogram (2 * (b + h))
     """
-    return 2 * (base + height)
+    return 2 * (b + h)
 ```
 
-- Renamed parameters from `b` and `h` to more descriptive `base` and `height`
-- Fixed the incorrect formula (original multiplied base and height instead of adding them)
-- Added a docstring to explain the function's purpose, parameters, and return value
-- Simplified the implementation by removing unnecessary intermediate variable
-- Maintained the same function signature and return type
-- Ensured the function still passes all existing tests (after fixing the logic error)
-- Improved code readability through better naming and structure
-- Kept the function focused on a single responsibility (calculating perimeter)
+- Fixed the incorrect formula from `2*(b*h)` to the correct perimeter formula `2*(b + h)`
+- Added docstring to clarify function purpose and parameters
+- Maintained the same function signature and name
+- Ensured the calculation is mathematically correct for parallelogram perimeter
+- The function now returns the correct perimeter value for any valid inputs
+- Edge cases (zero or negative values) will be handled naturally by the formula
+- No floating-point precision issues as this is integer arithmetic

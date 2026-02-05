@@ -1,14 +1,15 @@
 import cmath
 
-def len_complex(a: float, b: float) -> float:
-    """Calculate the magnitude of a complex number given its real and imaginary parts.
+def len_complex(a, b):
+    """Calculate the length (magnitude) of a complex number given its real and imaginary parts.
 
     Args:
-        a: The real part of the complex number.
-        b: The imaginary part of the complex number.
+        a (float): Real part of the complex number.
+        b (float): Imaginary part of the complex number.
 
     Returns:
-        The magnitude (length) of the complex number.
+        float: The magnitude of the complex number, calculated as sqrt(a^2 + b^2).
     """
-    complex_number = complex(a, b)
-    return abs(complex_number)
+    cn = complex(a, b)
+    length = abs(cn)
+    return length

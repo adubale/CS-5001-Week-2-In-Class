@@ -1,17 +1,17 @@
-def sum_lists(list1, list2):
-    """Return a new list where each element is the sum of corresponding elements from list1 and list2.
+def sum_list(lst1, lst2):
+    """Return a new list where each element is the sum of corresponding elements from lst1 and lst2.
 
     Args:
-        list1: First list of numbers
-        list2: Second list of numbers (must be same length as list1)
+        lst1: List of numbers
+        lst2: List of numbers (must be same length as lst1)
 
     Returns:
-        List of summed elements
+        List of sums with same length as input lists
 
     Raises:
-        ValueError: If lists are of different lengths
+        ValueError: If input lists have different lengths
     """
-    if len(list1) != len(list2):
-        raise ValueError("Input lists must be of equal length")
+    if len(lst1) != len(lst2):
+        raise ValueError("Input lists must have the same length")
 
-    return [a + b for a, b in zip(list1, list2)]
+    return [a + b for a, b in zip(lst1, lst2)]

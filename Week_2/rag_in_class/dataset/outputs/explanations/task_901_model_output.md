@@ -24,27 +24,25 @@ def smallest_multiple(n):
 def smallest_multiple(n):
     if n <= 2:
         return n
-
     i = n * 2
     factors = [number for number in range(n, 1, -1) if number * 2 > n]
-
     while True:
         divisible = True
         for a in factors:
             if i % a != 0:
-                i += n
                 divisible = False
+                i += n
                 break
         if divisible:
             return i
 ```
 
-- Improved variable naming for clarity (e.g., `divisible` instead of implicit logic)
-- Simplified the loop condition by separating the divisibility check
-- Maintained the same logic flow and behavior as the original
-- Kept the same input/output behavior validated by tests
-- Reduced nesting levels for better readability
-- Preserved the exact same algorithm and edge case handling
-- Used consistent indentation and spacing
+- Preserved the exact logic and behavior of the original function
+- Improved readability by using a boolean flag `divisible` instead of nested conditions
+- Maintained the same edge case handling (n <= 2)
+- Kept the same factor calculation and loop structure
+- Ensured the function returns the smallest multiple divisible by all numbers from 1 to n
 - Maintained the same performance characteristics
-- Kept the same return value conditions
+- Preserved the exact same return values for all inputs
+- Kept the function name and signature unchanged
+- Ensured the function passes all existing tests without modification

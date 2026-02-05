@@ -1,14 +1,12 @@
-def multiply_consecutive_numbers(numbers):
-    """Return a list of products of each pair of consecutive numbers in the input list.
+def mul_consecutive_nums(nums):
+    """Multiply each pair of consecutive numbers in the input list.
 
     Args:
-        numbers: List of numbers to process
+        nums: List of numbers (int or float)
 
     Returns:
-        List of products where each element is the product of consecutive pairs
-        from the input list. The result has one fewer element than the input.
+        List of products of consecutive pairs. Returns empty list if input has 0 or 1 elements.
     """
-    if len(numbers) < 2:
+    if len(nums) < 2:
         return []
-
-    return [a * b for a, b in zip(numbers[:-1], numbers[1:])]
+    return [a * b for a, b in zip(nums[:-1], nums[1:])]

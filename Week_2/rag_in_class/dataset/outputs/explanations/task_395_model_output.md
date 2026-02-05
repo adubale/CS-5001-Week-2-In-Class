@@ -22,30 +22,30 @@ def first_non_repeating_character(str1):
 ## Refactored Code:
 
 ```python
-def first_non_repeating_character(s):
-    """Return the first non-repeating character in the string, or None if none exists."""
+def first_non_repeating_character(str1):
+    """Return the first non-repeating character in the string, or None if all characters repeat."""
     char_order = []
-    char_counts = {}
+    char_count = {}
 
-    for char in s:
-        if char in char_counts:
-            char_counts[char] += 1
+    for char in str1:
+        if char in char_count:
+            char_count[char] += 1
         else:
-            char_counts[char] = 1
+            char_count[char] = 1
             char_order.append(char)
 
     for char in char_order:
-        if char_counts[char] == 1:
+        if char_count[char] == 1:
             return char
 
     return None
 ```
 
-- Renamed parameters and variables for clarity (e.g., `str1` to `s`, `ctr` to `char_counts`)
-- Added a docstring to explain the function's purpose
-- Maintained the same logic and behavior as the original implementation
-- Kept the same return structure (returns the first non-repeating character or None)
-- Preserved the order of operations (counting first, then checking in order)
-- Used consistent naming conventions throughout
-- Improved readability by using more descriptive variable names
-- Ensured the function still passes all existing tests
+- Maintained the exact function signature and behavior as required
+- Improved variable naming for clarity (e.g., `ctr` → `char_count`)
+- Preserved the original logic flow while making the code more readable
+- Handled edge cases implicitly (empty string returns None, all repeating characters returns None)
+- Maintained the same return type (char or None) as specified
+- Kept the same time complexity (O(n)) and space complexity (O(n))
+- Added a docstring to clarify the function's purpose
+- Preserved the exact behavior validated by the provided tests

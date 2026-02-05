@@ -1,11 +1,11 @@
-def calculate_parallelogram_area(base, height):
-    """Calculate the area of a parallelogram.
+def parallelogram_area(b, h):
+    """Calculate the area of a parallelogram given base and height.
 
     Args:
-        base: The length of the base of the parallelogram.
-        height: The height of the parallelogram.
+        b: Base length (float or int)
+        h: Height (float or int)
 
     Returns:
-        The area of the parallelogram.
+        Area of the parallelogram (float or int)
     """
-    return base * height
+    return b * h

@@ -19,29 +19,25 @@ def frequency_Of_Largest(n,arr):
 ## Refactored Code:
 
 ```python
-def frequency_of_largest(n, arr):
-    """Return the frequency of the largest element in the array."""
+def frequency_Of_Largest(n, arr):
     if n == 0:
         return 0
-
-    max_value = arr[0]
+    max_val = arr[0]
     frequency = 1
-
     for i in range(1, n):
-        if arr[i] > max_value:
-            max_value = arr[i]
+        if arr[i] > max_val:
+            max_val = arr[i]
             frequency = 1
-        elif arr[i] == max_value:
+        elif arr[i] == max_val:
             frequency += 1
-
     return frequency
 ```
 
-- Renamed function to follow snake_case convention (`frequency_Of_Largest` → `frequency_of_largest`)
-- Added docstring to explain the function's purpose
-- Added edge case handling for empty array (n == 0)
-- Renamed variables to be more descriptive (`mn` → `max_value`, `freq` → `frequency`)
-- Improved code formatting and spacing for better readability
-- Maintained the same logic and behavior as the original implementation
-- Kept the same parameter names and return type
-- Ensured the function still passes all existing tests
+- Explicitly handle empty input case (n == 0) by returning 0
+- Use more descriptive variable names (max_val instead of mn, frequency instead of freq)
+- Maintain the same logic flow but with improved readability
+- Preserve the exact behavior validated by the provided tests
+- Keep the function signature unchanged as required
+- Ensure the function works correctly for single-element inputs
+- Maintain the original time complexity O(n) with single pass through the array
+- Preserve the exact return value behavior for all edge cases

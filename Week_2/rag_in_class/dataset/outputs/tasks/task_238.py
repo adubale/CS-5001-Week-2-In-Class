@@ -1,13 +1,11 @@
-def number_of_substrings(input_string: str) -> int:
-    """Calculate the number of possible substrings in a given string.
-
-    The number of substrings in a string of length n is given by the formula n*(n+1)/2.
+def number_of_substrings(s: str) -> int:
+    """Calculate the number of possible substrings in a string.
 
     Args:
-        input_string: The input string for which to calculate substrings.
+        s: Input string
 
     Returns:
-        The count of possible substrings as an integer.
+        int: Number of substrings (n*(n+1)/2 where n is string length)
     """
-    length = len(input_string)
-    return length * (length + 1) // 2
+    str_len = len(s)
+    return int(str_len * (str_len + 1) / 2)
