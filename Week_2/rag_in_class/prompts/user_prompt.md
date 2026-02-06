@@ -12,7 +12,7 @@ Under no circumstance should the code's externally observable behavior change.
 - Provide exactly one Python code block containing the full refactored implementation.
 - After the code block, provide a checklist in 5 to 10 bullets.
 - Do NOT include any additional text outside that format.
-- Do NOT rename any public functions, classes, or module-level constants referenced by the tests.
+- Do NOT rename any public functions, classes, or module-level constants.
 - Do NOT change function signatures (parameters, defaults, *args/**kwargs) or return types.
 
 ## Behavioral Preservation Rules
