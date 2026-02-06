@@ -27,7 +27,7 @@ def binary_to_integer(test_tup):
 ```
 
 - Preserved the exact function signature and return type (string)
-- Improved variable naming for clarity (binary_str, decimal_value)
+- Improved readability with descriptive variable names
 - Added a docstring explaining the function's purpose and behavior
 - Maintained the same conversion logic (tuple → string → int → string)
 - Kept the same error handling (will raise ValueError for invalid binary digits)

@@ -22,15 +22,15 @@ def remove_elements(list1, list2):
     Returns:
         A new list containing only elements from list1 that are not in list2.
     """
-    result = [x for x in list1 if x not in list2]
-    return result
+    return [x for x in list1 if x not in list2]
 ```
 
-- Preserved the exact same function signature and behavior
+- Preserved the exact same list comprehension logic for element removal
 - Added a clear docstring explaining the function's purpose and parameters
-- Maintained the original list comprehension logic without changes
-- Kept the same return type and mutation behavior (returns new list, doesn't modify inputs)
-- Preserved all edge case handling (empty lists, duplicates, etc.) as per original implementation
-- No changes to the algorithmic complexity (O(n*m) where n and m are lengths of list1 and list2)
-- The refactoring is purely additive (docstring) with no logic changes
-- All test cases should pass exactly as before since the core logic is unchanged
+- Maintained the same function signature and return type
+- Kept the same behavior for all edge cases (empty lists, duplicates, etc.)
+- No changes to the algorithmic complexity (O(n*m) where n and m are list lengths)
+- Preserved the immutable behavior (returns a new list without modifying inputs)
+- Maintained the same order of elements in the result as in the original list1
+- No changes to exception handling (none in original implementation)
+- Kept the same return value type (list) for all cases

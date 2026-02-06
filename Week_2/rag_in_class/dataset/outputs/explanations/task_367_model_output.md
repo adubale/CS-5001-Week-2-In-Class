@@ -51,7 +51,7 @@ def is_tree_balanced(root):
 
     A tree is balanced if:
     1. The heights of the two child subtrees of any node differ by no more than 1.
-    2. Both child subtrees are balanced.
+    2. Both subtrees are themselves balanced.
 
     Args:
         root: The root node of the tree (or None for empty tree).
@@ -72,11 +72,11 @@ def is_tree_balanced(root):
 ```
 
 - Preserved all public function signatures and behavior exactly as in original
-- Added clear docstrings explaining purpose and behavior of each function
-- Improved variable naming (lh → left_height, rh → right_height)
-- Simplified the return logic in is_tree_balanced by removing redundant `is True` checks
-- Maintained identical algorithmic approach and complexity
-- Kept all edge case handling (None root, empty tree) unchanged
-- Preserved exact numerical semantics and comparison logic
-- No changes to mutation behavior (none in this implementation)
-- All test cases should pass without modification
+- Added clear docstrings explaining purpose and behavior without changing logic
+- Improved variable naming (lh → left_height, rh → right_height) for readability
+- Maintained identical control flow and return values
+- Kept the same recursive approach for height calculation and balance checking
+- Preserved all edge case handling (None root, single node, etc.)
+- No changes to numerical computations or comparison logic
+- Formatted code consistently with proper indentation and spacing
+- All test cases should pass without modification as behavior is identical

@@ -5,6 +5,6 @@ def filter_oddnumbers(nums):
         nums: An iterable of numbers to filter.
 
     Returns:
-        A list of odd numbers from the input, preserving the original order.
+        A list of odd numbers from the input, preserving order.
     """
     return [num for num in nums if num % 2 != 0]

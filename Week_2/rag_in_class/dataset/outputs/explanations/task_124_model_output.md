@@ -18,14 +18,14 @@ import cmath
 from typing import Union
 
 def angle_complex(a: Union[int, float], b: Union[int, float]) -> float:
-    """Calculate the phase angle of the complex number formed by a + b.
+    """Calculate the phase angle of the complex number formed by a and b.
 
     Args:
         a: Real part of the complex number.
         b: Imaginary part of the complex number.
 
     Returns:
-        The phase angle in radians of the complex number (a + b).
+        The phase angle in radians of the complex number (a + b*1j).
     """
     complex_num = complex(a, b)
     angle = cmath.phase(complex_num)
@@ -33,11 +33,10 @@ def angle_complex(a: Union[int, float], b: Union[int, float]) -> float:
 ```
 
 - Preserved the exact function signature and behavior
-- Added type hints for better code clarity
-- Added a descriptive docstring explaining the function's purpose
-- Renamed variables for better readability (cn → complex_num)
-- Maintained the same mathematical operation and return type
-- Kept the same import structure
-- No changes to the core logic or algorithm
-- Preserved all edge case handling implicitly through the same implementation
-- Maintained the same exception behavior (if any) as the original
+- Added type hints for better code documentation
+- Added a clear docstring explaining the function's purpose and parameters
+- Renamed variables for better clarity (cn → complex_num)
+- Maintained the same mathematical operation (cmath.phase on the complex number)
+- Kept the same return type (float)
+- No changes to the core logic or behavior
+- All test cases should pass without modification

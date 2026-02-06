@@ -30,11 +30,11 @@ def upper_ctr(s: str) -> int:
     return count
 ```
 
-- Fixed the indentation error in the original loop (return was inside the loop)
-- Renamed parameter from `str` to `s` to avoid shadowing built-in `str`
-- Added type hints and docstring without changing runtime behavior
-- Simplified loop by iterating directly over characters
-- Maintained exact same comparison logic for uppercase detection
-- Preserved return type and behavior (returns 0 for empty string, etc.)
-- Kept the same variable naming style (count instead of upper_ctr for clarity)
-- No changes to algorithmic complexity or edge case handling
+- Fixed the indentation error in the original loop
+- Renamed the parameter from `str` to `s` to avoid shadowing the built-in `str` type
+- Renamed the counter variable from `upper_ctr` to `count` for clarity
+- Added type hints and a docstring without changing runtime behavior
+- Simplified the loop to iterate directly over characters instead of using indices
+- Maintained the exact same logic for checking uppercase letters
+- Preserved the return value and function signature exactly as in the original
+- The function still returns 0 for empty strings and handles all edge cases the same way

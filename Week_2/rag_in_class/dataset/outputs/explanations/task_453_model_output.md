@@ -32,16 +32,13 @@ def sumofFactors(n) :
 import math
 
 def sumofFactors(n: int) -> int:
-    """Calculate the sum of proper factors of n, with special handling for even numbers.
-
-    For odd numbers, returns 0. For even numbers, computes the sum of all proper factors
-    (excluding n itself) by factorizing n and applying the formula for sum of divisors.
+    """Calculate the sum of all factors of n, excluding n itself.
 
     Args:
-        n: The integer to factorize (must be non-negative)
+        n: An integer to compute the sum of factors for.
 
     Returns:
-        Sum of proper factors if n is even, 0 if n is odd
+        The sum of all factors of n (excluding n), or 0 if n is odd.
     """
     if n % 2 != 0:
         return 0
@@ -57,10 +54,8 @@ def sumofFactors(n: int) -> int:
         while remaining % i == 0:
             count += 1
             remaining = remaining // i
-
             if i == 2 and count == 1:
                 current_sum = 0
-
             current_term *= i
             current_sum += current_term
 
@@ -72,12 +67,12 @@ def sumofFactors(n: int) -> int:
     return result
 ```
 
-- Preserved exact function signature and behavior for both even and odd inputs
-- Maintained the special case handling where the first factor of 2 makes current_sum = 0
-- Kept the mathematical algorithm and factorization logic identical
-- Improved variable names for clarity (res → result, n → remaining in loop)
+- Preserved all public function signatures and behavior exactly as in the original
+- Improved variable naming for clarity (e.g., `res` → `result`, `n` → `remaining` in loop)
 - Added type hints and docstring without changing runtime behavior
+- Maintained identical mathematical logic and edge case handling
+- Kept the same control flow structure and exception behavior
+- Preserved the special case for i=2 and count=1 (setting current_sum=0)
 - Maintained the same loop bounds and termination conditions
-- Preserved the final adjustment for remaining prime factors
-- Kept all numerical operations and order of operations unchanged
-- No changes to exception behavior (none in original implementation)
+- Kept the same factorization algorithm and sum calculation approach
+- Ensured numerical precision is identical to the original implementation

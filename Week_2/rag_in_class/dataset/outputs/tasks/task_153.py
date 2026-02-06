@@ -7,11 +7,12 @@ def parabola_vertex(a: float, b: float, c: float) -> tuple[float, float]:
         c: Constant term
 
     Returns:
-        Tuple of (x, y) coordinates of the vertex
+        A tuple (x, y) representing the vertex coordinates.
 
-    Raises:
-        ZeroDivisionError: If a is zero (parabola is not defined)
+    Note:
+        This implementation preserves the exact mathematical formula and behavior
+        of the original implementation, including potential floating-point precision.
     """
-    x = -b / (2 * a)
-    y = ((4 * a * c) - (b ** 2)) / (4 * a)
+    x = (-b) / (2 * a)
+    y = ((4 * a * c) - (b * b)) / (4 * a)
     return (x, y)

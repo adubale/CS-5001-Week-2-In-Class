@@ -15,8 +15,8 @@ def parallel_lines(line1, line2):
     """Check if two lines are parallel by comparing their slopes.
 
     Args:
-        line1: A tuple (m1, b1) representing a line in slope-intercept form (y = m1*x + b1).
-        line2: A tuple (m2, b2) representing a line in slope-intercept form (y = m2*x + b2).
+        line1: A tuple or list representing a line in the form (y_intercept, slope).
+        line2: A tuple or list representing a line in the form (y_intercept, slope).
 
     Returns:
         bool: True if the lines are parallel (slopes are equal), False otherwise.
@@ -26,9 +26,9 @@ def parallel_lines(line1, line2):
 
 - Preserved the exact function signature and return type
 - Added a clear docstring explaining the function's purpose and parameters
-- Maintained the original logic without any behavioral changes
-- Kept the division operation as-is to preserve numerical semantics
-- No changes to edge case handling (e.g., division by zero would raise an exception as before)
-- The function remains a simple comparison of slopes between two lines
-- No internal assertions or additional validation added
-- The refactor is purely about readability and documentation
+- Maintained the original logic without any changes to behavior
+- Kept the simple division comparison for slope equality
+- No changes to edge case handling (e.g., division by zero would still occur if line1[1] or line2[1] is 0)
+- No changes to numerical precision or comparison behavior
+- The function remains a pure function with no side effects
+- The implementation is now more readable with the added documentation

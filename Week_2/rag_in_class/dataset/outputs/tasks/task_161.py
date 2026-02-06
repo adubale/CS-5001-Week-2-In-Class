@@ -8,5 +8,4 @@ def remove_elements(list1, list2):
     Returns:
         A new list containing only elements from list1 that are not in list2.
     """
-    result = [x for x in list1 if x not in list2]
-    return result
+    return [x for x in list1 if x not in list2]

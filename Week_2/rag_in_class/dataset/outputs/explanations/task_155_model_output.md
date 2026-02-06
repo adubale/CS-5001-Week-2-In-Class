@@ -18,7 +18,7 @@ def even_bit_toggle_number(n) :
 
 ```python
 def even_bit_toggle_number(n: int) -> int:
-    """Toggle the bits at even positions (0-indexed) in the binary representation of n.
+    """Toggle the bits at even positions (0-indexed from the right) in the integer n.
 
     Args:
         n: The integer whose bits are to be toggled.
@@ -26,25 +26,25 @@ def even_bit_toggle_number(n: int) -> int:
     Returns:
         The integer with even-positioned bits toggled.
     """
-    res = 0
-    count = 0
+    result = 0
+    bit_position = 0
     temp = n
 
     while temp > 0:
-        if count % 2 == 1:  # Even position (0-indexed)
-            res |= 1 << count
-        count += 1
+        if bit_position % 2 == 1:  # Even position (0-indexed)
+            result |= 1 << bit_position
+        bit_position += 1
         temp >>= 1
 
-    return n ^ res
+    return n ^ result
 ```
 
-- Preserved the exact logic and behavior of the original function
-- Added type hints and docstring for clarity without changing runtime behavior
-- Improved variable naming and spacing for readability
-- Maintained the same algorithmic approach and bit manipulation operations
-- Kept the same function signature and return type
-- Preserved all edge case handling (negative numbers, zero, etc.)
-- No changes to the bit toggling logic or order of operations
-- Maintained the same mutation behavior (none - input is not modified)
-- Kept the same exception behavior (none - function handles all inputs gracefully)
+- Preserved the exact logic of toggling even-positioned bits (0-indexed from the right)
+- Improved variable names for clarity (res → result, count → bit_position, temp remains as it's a common convention)
+- Added a docstring explaining the function's purpose and behavior
+- Maintained the same algorithmic complexity (O(log n) where n is the input number)
+- Kept the same return type and mutation behavior (no mutation of input)
+- Preserved the exact bit manipulation operations and their order
+- Maintained the same handling of edge cases (0, negative numbers, etc.)
+- No changes to the public API or function signature
+- Added type hints without changing runtime behavior

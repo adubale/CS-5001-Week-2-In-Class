@@ -1,15 +1,15 @@
 import cmath
-from typing import Union, Tuple
+from typing import Union, List, Tuple
 
-def convert(numbers: Union[complex, float, int]) -> Tuple[float, float]:
+def convert(numbers: Union[complex, List[complex]]) -> Union[Tuple[float, float], List[Tuple[float, float]]]:
     """
-    Convert a complex number or real number to its polar form (magnitude, phase in radians).
+    Convert complex number(s) to polar form using cmath.polar.
 
     Args:
-        numbers: A complex number or real number to convert.
+        numbers: A single complex number or a list of complex numbers.
 
     Returns:
-        A tuple (magnitude, phase) representing the polar form of the input number.
+        For a single complex number: tuple of (magnitude, phase) in radians.
+        For a list of complex numbers: list of (magnitude, phase) tuples.
     """
-    magnitude, phase = cmath.polar(numbers)
-    return (magnitude, phase)
+    return cmath.polar(numbers)

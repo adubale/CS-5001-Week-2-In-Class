@@ -6,6 +6,7 @@ def parallelogram_perimeter(base: float, height: float) -> float:
         height: The height of the parallelogram.
 
     Returns:
-        The perimeter of the parallelogram (2 * base * height).
+        The perimeter of the parallelogram, calculated as 2 * (base * height).
     """
-    return 2 * (base * height)
+    perimeter = 2 * (base * height)
+    return perimeter

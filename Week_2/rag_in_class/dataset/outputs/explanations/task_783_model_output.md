@@ -39,8 +39,8 @@ def rgb_to_hsv(r: float, g: float, b: float) -> tuple[float, float, float]:
     Returns:
         Tuple of (hue, saturation, value) where:
         - hue is in degrees [0, 360)
-        - saturation is a percentage [0, 100]
-        - value is a percentage [0, 100]
+        - saturation is percentage [0, 100]
+        - value is percentage [0, 100]
     """
     # Normalize RGB values to [0, 1] range
     r_norm = r / 255.0
@@ -70,12 +70,12 @@ def rgb_to_hsv(r: float, g: float, b: float) -> tuple[float, float, float]:
     return hue, saturation, value
 ```
 
-- Preserved exact function signature and return type
-- Maintained all numerical calculations and edge case handling
-- Improved variable naming for clarity (e.g., `mx` → `max_val`, `mn` → `min_val`)
-- Added docstring explaining the function's purpose and return value ranges
-- Added type hints without changing runtime behavior
-- Kept the same algorithmic approach and mathematical operations
-- Maintained the same behavior for all edge cases (grayscale, pure colors, etc.)
-- Preserved the exact same return value formatting and ranges
-- No changes to exception handling (none in original)
+- Preserved exact mathematical formulas and computation order
+- Added type hints and docstring without changing runtime behavior
+- Renamed variables for clarity (e.g., `mx` → `max_val`, `mn` → `min_val`)
+- Maintained all edge case handling (zero values, equal RGB components)
+- Kept the same return type and structure
+- Preserved all numerical precision and rounding behavior
+- Maintained the same exception behavior (none raised)
+- No changes to function signature or public API
+- All test cases should pass without modification

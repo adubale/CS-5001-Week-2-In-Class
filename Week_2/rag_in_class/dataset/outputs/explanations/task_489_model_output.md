@@ -27,30 +27,30 @@ def frequency_Of_Largest(n, arr):
         arr: List of numbers to analyze.
 
     Returns:
-        int: Count of how many times the largest value appears in the array.
+        int: Count of how many times the maximum value appears in the array.
     """
     if not arr:
         return 0
 
-    max_value = arr[0]
+    max_val = arr[0]
     frequency = 1
 
-    for value in arr[1:]:
-        if value > max_value:
-            max_value = value
+    for num in arr[1:]:
+        if num > max_val:
+            max_val = num
             frequency = 1
-        elif value == max_value:
+        elif num == max_val:
             frequency += 1
 
     return frequency
 ```
 
 - Preserved exact function signature and behavior
-- Improved variable names for clarity (mn → max_value, freq → frequency)
+- Improved variable names for clarity (mn → max_val, freq → frequency)
 - Added docstring explaining purpose and parameters
 - Maintained original logic flow without changes
 - Kept the unused `n` parameter for API compatibility
 - Preserved edge case handling (empty array would return 0)
-- No changes to numerical semantics or ordering
-- No changes to mutation behavior (none exists)
-- All test cases should pass unchanged
+- No changes to numerical precision or comparison logic
+- Maintained same iteration approach and comparison order
+- Kept the same return type and value semantics

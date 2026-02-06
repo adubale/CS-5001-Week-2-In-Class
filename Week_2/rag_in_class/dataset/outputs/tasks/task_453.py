@@ -1,16 +1,13 @@
 import math
 
 def sumofFactors(n: int) -> int:
-    """Calculate the sum of proper factors of n, with special handling for even numbers.
-
-    For odd numbers, returns 0. For even numbers, computes the sum of all proper factors
-    (excluding n itself) by factorizing n and applying the formula for sum of divisors.
+    """Calculate the sum of all factors of n, excluding n itself.
 
     Args:
-        n: The integer to factorize (must be non-negative)
+        n: An integer to compute the sum of factors for.
 
     Returns:
-        Sum of proper factors if n is even, 0 if n is odd
+        The sum of all factors of n (excluding n), or 0 if n is odd.
     """
     if n % 2 != 0:
         return 0
@@ -26,10 +23,8 @@ def sumofFactors(n: int) -> int:
         while remaining % i == 0:
             count += 1
             remaining = remaining // i
-
             if i == 2 and count == 1:
                 current_sum = 0
-
             current_term *= i
             current_sum += current_term
 

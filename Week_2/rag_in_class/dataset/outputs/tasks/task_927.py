@@ -8,10 +8,10 @@ def max_height(node):
     """Calculate the maximum height of a binary tree rooted at the given node.
 
     Args:
-        node: The root node of the binary tree (or None for an empty tree).
+        node: The root node of the binary tree. Can be None for an empty tree.
 
     Returns:
-        int: The maximum height of the tree, where an empty tree has height 0.
+        int: The maximum height of the tree. Returns 0 for an empty tree.
     """
     if node is None:
         return 0

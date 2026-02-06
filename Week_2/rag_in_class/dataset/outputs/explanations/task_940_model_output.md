@@ -52,7 +52,7 @@ def heap_sort(arr):
     return arr
 
 def heapify(arr):
-    """Convert the input array into a max-heap in-place.
+    """Transform the array into a max-heap in-place.
 
     Args:
         arr: List to be transformed into a max-heap.
@@ -63,7 +63,7 @@ def heapify(arr):
         start -= 1
 
 def shift_down(arr, start, end):
-    """Perform a shift-down operation to maintain the max-heap property.
+    """Move the element at 'start' down the heap to maintain heap property.
 
     Args:
         arr: The heap array.
@@ -73,7 +73,7 @@ def shift_down(arr, start, end):
     root = start
     while root * 2 + 1 <= end:
         child = root * 2 + 1
-        # Choose the larger child
+        # Compare with right child if it exists and is larger
         if child + 1 <= end and arr[child] < arr[child + 1]:
             child += 1
         # Swap if root is smaller than the larger child
@@ -84,12 +84,12 @@ def shift_down(arr, start, end):
             return
 ```
 
-- Added comprehensive docstrings to all functions explaining purpose, parameters, and return values
-- Improved variable naming in comments to clarify heap operations
-- Maintained exact same algorithm and logic flow
-- Preserved all function signatures and return types
-- Kept all mutation behavior identical
-- No changes to numerical operations or edge case handling
-- Added comments explaining key steps in the heap operations
-- Maintained the same control flow structure
-- All helper functions remain private with no API changes
+- Preserved all public function signatures and behavior exactly
+- Added clear docstrings explaining each function's purpose and parameters
+- Improved variable naming in comments for better readability
+- Maintained the exact same algorithm and logic flow
+- Kept all edge case handling identical (empty arrays, single elements, etc.)
+- Preserved the in-place mutation behavior of all functions
+- Maintained the same return values and exception behavior
+- Kept the numerical semantics and comparison operations unchanged
+- Ensured the heap property is maintained exactly as before

@@ -15,34 +15,32 @@ def sum_Pairs(arr,n):
 
 ```python
 def sum_Pairs(arr, n):
-    """Calculate the sum of pairs in the array with a specific weighting pattern.
+    """Calculate a weighted sum of array elements based on their positions.
 
-    For each element at index i (0-based), the contribution to the sum is:
-    i * arr[i] - (n - 1 - i) * arr[i]
-
-    This simplifies to: (2*i - (n - 1)) * arr[i]
+    For each element at index i (0-based), the weight is:
+    - Positive contribution: i * arr[i]
+    - Negative contribution: (n-1-i) * arr[i]
+    The total sum is the sum of all these weighted contributions.
 
     Args:
-        arr: List of numbers to process
-        n: Length of the array (must match len(arr))
+        arr: List of numbers to be processed
+        n: Number of elements to consider (must be <= len(arr))
 
     Returns:
-        The computed sum based on the weighting formula
+        The computed weighted sum
     """
     total = 0
     for i in range(n - 1, -1, -1):
-        # Calculate the weighted contribution for each element
-        weight = 2 * i - (n - 1)
+        weight = i - (n - 1 - i)
         total += weight * arr[i]
     return total
 ```
 
-- Preserved the exact mathematical formula and iteration order (backwards)
-- Renamed `sum` to `total` to avoid shadowing built-in
-- Extracted the weight calculation for clarity while maintaining identical computation
-- Added docstring explaining the formula without changing behavior
-- Kept the same parameter names and return type
-- Maintained the same loop bounds and iteration direction
-- Preserved the exact same numerical computation for each element
-- No changes to edge case handling (works with any n and array length)
-- No changes to exception behavior (none in original)
+- Preserved the exact mathematical formula: `i*arr[i] - (n-1-i)*arr[i]`
+- Renamed `sum` to `total` to avoid shadowing built-in `sum()`
+- Extracted the weight calculation into a separate variable for clarity
+- Added a descriptive docstring explaining the algorithm
+- Maintained the same loop direction (backwards) and range
+- Kept the same parameter names and function signature
+- Preserved all numerical behavior exactly
+- No changes to edge case handling (empty arrays, negative indices, etc.)

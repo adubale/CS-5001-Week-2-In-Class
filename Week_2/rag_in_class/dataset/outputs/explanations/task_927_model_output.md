@@ -34,10 +34,10 @@ def max_height(node):
     """Calculate the maximum height of a binary tree rooted at the given node.
 
     Args:
-        node: The root node of the binary tree (or None for an empty tree).
+        node: The root node of the binary tree. Can be None for an empty tree.
 
     Returns:
-        int: The maximum height of the tree, where an empty tree has height 0.
+        int: The maximum height of the tree. Returns 0 for an empty tree.
     """
     if node is None:
         return 0
@@ -46,11 +46,12 @@ def max_height(node):
     return max(left_height, right_height) + 1
 ```
 
-- Preserved the exact behavior of the original implementation, including handling of None input
-- Simplified the conditional logic using `max()` function without changing behavior
-- Added docstring to explain the function's purpose and behavior
-- Maintained the same function signature and return type
-- Kept the recursive approach with identical base case and recursive cases
-- Preserved the height calculation formula (max child height + 1)
+- Preserved the exact same public API (Node class and max_height function)
+- Maintained the same recursive algorithm and base case handling
+- Simplified the return logic using max() instead of if-else
+- Added a clear docstring explaining the function's purpose and behavior
+- Kept all variable names meaningful and consistent
+- Preserved the exact same behavior for all edge cases (None input, empty tree, etc.)
+- Maintained the same time and space complexity (O(n) time, O(h) space where h is tree height)
 - No changes to the Node class structure or initialization
 - All test cases should pass without modification

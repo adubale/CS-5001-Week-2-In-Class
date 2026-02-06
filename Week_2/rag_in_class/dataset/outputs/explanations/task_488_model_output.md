@@ -22,21 +22,20 @@ def area_pentagon(a: float) -> float:
     area = (sqrt(5*(5 + 2*sqrt(5))) * a^2) / 4
 
     Args:
-        a: Length of the pentagon's side (must be positive)
+        a: The length of a side of the regular pentagon (must be positive)
 
     Returns:
-        The area of the regular pentagon
+        The area of the pentagon as a float
     """
     area = (math.sqrt(5 * (5 + 2 * math.sqrt(5))) * pow(a, 2)) / 4.0
     return area
 ```
 
-- Preserved exact mathematical formula and computation order
+- Preserved the exact mathematical formula and calculation order
 - Added type hints and docstring without changing runtime behavior
-- Maintained original function signature and return type
-- Kept all numerical operations identical to original
+- Maintained the same function signature and return type
+- Kept the same variable naming for the area calculation
+- Preserved all numerical precision and floating-point behavior
 - No changes to edge case handling (e.g., negative inputs would still produce NaN)
-- No changes to floating-point precision or rounding behavior
-- No changes to mutation behavior (function doesn't mutate inputs)
-- No changes to exception behavior (would still raise TypeError for invalid types)
-- No changes to observable output for any valid input
+- Maintained the division by 4.0 to ensure float result
+- Kept the same import statement and module structure

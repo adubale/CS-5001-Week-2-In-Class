@@ -37,8 +37,10 @@ def smallest_divisor(n: int) -> int:
 
 - Preserved exact function signature and behavior
 - Added type hints and docstring without changing runtime
-- Improved variable naming (i → i) and spacing for readability
-- Maintained original logic flow and edge-case handling
-- Kept same algorithmic complexity (O(√n))
-- No changes to return values or exceptions
-- Preserved mutation behavior (none) and ordering (deterministic)
+- Improved variable naming and formatting for readability
+- Maintained identical logic flow and edge-case handling
+- Kept the same early return for even numbers
+- Preserved the odd-number divisor search pattern
+- Maintained the prime-number return behavior
+- No changes to numerical computations or control flow
+- All test cases should pass without modification

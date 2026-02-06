@@ -48,13 +48,12 @@ def first_non_repeating_character(str1: str) -> str | None:
     return None
 ```
 
-- Preserved exact function signature and return type behavior (None vs False)
-- Improved variable names for clarity (ctr → char_counts, c → char)
-- Added docstring explaining behavior without changing runtime
-- Maintained original algorithm and order of operations
-- Kept mutation behavior identical (no changes to input string)
-- Preserved edge case handling (empty string, all repeats, etc.)
-- No changes to numerical or precision behavior (none applicable)
-- No changes to exception behavior (none raised)
-- Maintained original order of character checking
-- Added type hints without altering runtime behavior
+- Preserved exact function signature and return type behavior (returns `str` or `None`)
+- Improved variable names (`ctr` → `char_counts`, `c` → `char`) for clarity
+- Added type hints and docstring without changing runtime behavior
+- Maintained original algorithm and logic flow exactly
+- Kept the same order of operations and return values
+- No changes to edge case handling (empty string, all repeats, etc.)
+- Preserved the use of `None` as the return value for no matches
+- No changes to mutation behavior (none in this function)
+- No changes to exception behavior (none raised in this function)

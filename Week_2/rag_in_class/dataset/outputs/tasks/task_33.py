@@ -6,6 +6,7 @@ def decimal_To_Binary(N: int) -> int:
 
     Returns:
         The binary representation of N as an integer (e.g., 5 -> 101).
+        Returns 0 if N is 0.
     """
     binary_number = 0
     position = 0

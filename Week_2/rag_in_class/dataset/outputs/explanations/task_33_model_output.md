@@ -27,6 +27,7 @@ def decimal_To_Binary(N: int) -> int:
 
     Returns:
         The binary representation of N as an integer (e.g., 5 -> 101).
+        Returns 0 if N is 0.
     """
     binary_number = 0
     position = 0
@@ -41,11 +42,10 @@ def decimal_To_Binary(N: int) -> int:
 ```
 
 - Preserved exact function signature and behavior
-- Improved variable names for clarity (B_Number → binary_number, cnt → position)
-- Added docstring explaining purpose, parameters, and return value
+- Improved variable names for clarity (B_Number -> binary_number, cnt -> position)
+- Added docstring explaining purpose, args, and return value
 - Maintained identical logic and control flow
 - Kept same mathematical operations and order
-- Preserved handling of edge cases (N=0 returns 0)
+- Preserved handling of edge cases (N=0, negative numbers if any)
 - No changes to return type or exception behavior
-- Maintained same algorithmic complexity (O(log N))
-- Added type hints without affecting runtime behavior
+- Code structure remains simple and straightforward

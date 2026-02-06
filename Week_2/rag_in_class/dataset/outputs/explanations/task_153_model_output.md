@@ -21,21 +21,23 @@ def parabola_vertex(a: float, b: float, c: float) -> tuple[float, float]:
         c: Constant term
 
     Returns:
-        Tuple of (x, y) coordinates of the vertex
+        A tuple (x, y) representing the vertex coordinates.
 
-    Raises:
-        ZeroDivisionError: If a is zero (parabola is not defined)
+    Note:
+        This implementation preserves the exact mathematical formula and behavior
+        of the original implementation, including potential floating-point precision.
     """
-    x = -b / (2 * a)
-    y = ((4 * a * c) - (b ** 2)) / (4 * a)
+    x = (-b) / (2 * a)
+    y = ((4 * a * c) - (b * b)) / (4 * a)
     return (x, y)
 ```
 
-- Preserved exact mathematical formulas for vertex calculation
+- Preserved exact mathematical formula and floating-point behavior
 - Added type hints and docstring without changing runtime behavior
-- Improved variable naming for clarity (x, y instead of vertex tuple)
-- Maintained original exception behavior (ZeroDivisionError when a=0)
-- Kept identical return structure (tuple of two floats)
-- No changes to function signature or return type
-- Mathematical operations remain in same order to preserve floating-point precision
-- No changes to edge case handling (e.g., negative values, zeros)
+- Improved variable naming for clarity (x, y instead of unpacked tuple)
+- Maintained identical function signature and return structure
+- Kept the same calculation order to preserve numerical semantics
+- No changes to edge case handling (e.g., division by zero would still occur if a=0)
+- Preserved tuple return format exactly as original
+- No changes to mutation behavior (function is pure)
+- Maintained identical exception behavior (would raise ZeroDivisionError if a=0)

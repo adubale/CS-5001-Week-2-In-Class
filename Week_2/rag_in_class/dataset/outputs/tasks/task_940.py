@@ -16,7 +16,7 @@ def heap_sort(arr):
     return arr
 
 def heapify(arr):
-    """Convert the input array into a max-heap in-place.
+    """Transform the array into a max-heap in-place.
 
     Args:
         arr: List to be transformed into a max-heap.
@@ -27,7 +27,7 @@ def heapify(arr):
         start -= 1
 
 def shift_down(arr, start, end):
-    """Perform a shift-down operation to maintain the max-heap property.
+    """Move the element at 'start' down the heap to maintain heap property.
 
     Args:
         arr: The heap array.
@@ -37,7 +37,7 @@ def shift_down(arr, start, end):
     root = start
     while root * 2 + 1 <= end:
         child = root * 2 + 1
-        # Choose the larger child
+        # Compare with right child if it exists and is larger
         if child + 1 <= end and arr[child] < arr[child + 1]:
             child += 1
         # Swap if root is smaller than the larger child

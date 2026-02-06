@@ -1,13 +1,16 @@
 def remove_column(list1: list, n: int) -> list:
-    """Remove the element at index n from each sublist in list1.
+    """Remove the nth column from each row in the 2D list.
 
     Args:
-        list1: A list of lists where each sublist has at least n+1 elements.
-        n: The index of the element to remove from each sublist.
+        list1: A 2D list where each element is a list representing a row.
+        n: The index of the column to remove from each row.
 
     Returns:
-        The modified list1 with elements at index n removed from each sublist.
+        The modified 2D list with the nth column removed from each row.
+
+    Note:
+        This function mutates the input list and its sublists in-place.
     """
-    for sublist in list1:
-        del sublist[n]
+    for row in list1:
+        del row[n]
     return list1

@@ -1,5 +1,5 @@
 def digit_distance_nums(n1: int, n2: int) -> int:
-    """Calculate the sum of digits in the absolute difference between two numbers.
+    """Calculate the sum of the digits in the absolute difference between two numbers.
 
     Args:
         n1: First integer

@@ -20,16 +20,16 @@ def parallelogram_perimeter(base: float, height: float) -> float:
         height: The height of the parallelogram.
 
     Returns:
-        The perimeter of the parallelogram (2 * base * height).
+        The perimeter of the parallelogram, calculated as 2 * (base * height).
     """
-    return 2 * (base * height)
+    perimeter = 2 * (base * height)
+    return perimeter
 ```
 
 - Renamed parameters from `b` and `h` to `base` and `height` for clarity while preserving function signature
-- Added type hints and docstring without changing runtime behavior
-- Simplified the implementation by removing the intermediate variable `perimeter`
-- Maintained exact mathematical behavior (2 * base * height)
-- Preserved all edge-case handling (zeros, negatives, etc.) as the formula remains unchanged
-- Kept the same return type (float) and no exceptions are raised
-- No changes to mutation behavior (none in original)
-- No changes to observable output order (not applicable for this function)
+- Added type hints (`float`) to parameters and return value
+- Added docstring explaining the function's purpose, parameters, and return value
+- Maintained the exact same calculation logic (`2 * (base * height)`)
+- Preserved the return type and behavior exactly as in the original implementation
+- No changes to the mathematical formula or edge case handling
+- Kept the simple, straightforward implementation without adding unnecessary complexity

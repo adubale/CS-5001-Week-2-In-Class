@@ -25,13 +25,11 @@ def is_nonagonal(n: int) -> int:
     return int(n * (7 * n - 5) / 2)
 ```
 
-- Preserved the exact formula and return type (int) as required
+- Preserved the exact formula and return type (int) as in the original
 - Added type hints and docstring without changing runtime behavior
-- Maintained the same function signature and name
-- Kept the mathematical computation identical to the original
+- Kept the function signature identical to maintain compatibility
+- Maintained the same mathematical computation and integer conversion
 - No changes to edge case handling (e.g., negative numbers would still produce negative results)
-- No changes to the integer conversion behavior
-- The refactor is purely additive (documentation) with no logic changes
-- All test cases should pass exactly as before
-- No new dependencies or imports added
+- No changes to the order of operations which could affect floating-point precision
 - The function remains a pure function with no side effects
+- All existing test cases should pass without modification

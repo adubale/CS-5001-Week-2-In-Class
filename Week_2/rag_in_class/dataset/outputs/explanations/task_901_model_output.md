@@ -40,7 +40,7 @@ def smallest_multiple(n: int) -> int:
         return n
 
     i = n * 2
-    # Generate factors from n down to 3 (since 1 and 2 are already handled by n>=3)
+    # Generate factors from n down to 3 (since 1 and 2 are already handled by n*2)
     factors = [number for number in range(n, 2, -1) if number * 2 > n]
 
     while True:
@@ -54,10 +54,9 @@ def smallest_multiple(n: int) -> int:
 
 - Preserved the exact logic and behavior of the original function
 - Added type hints and docstring for better readability without changing runtime behavior
-- Renamed local variables for clarity (e.g., `a` to `number` in list comprehension, kept `a` in loop for brevity)
+- Renamed local variables for clarity (e.g., `a` to `number` in list comprehension)
 - Maintained the same algorithmic approach and complexity
-- Kept the same edge case handling (n <= 2)
+- Kept the same edge-case handling (n <= 2)
 - Preserved the exact same control flow and return conditions
-- No changes to function signature or return type
-- Added examples in docstring that match the expected behavior
-- Maintained the same variable initialization and loop structure
+- No changes to the mathematical operations or their order
+- All test cases should pass exactly as before

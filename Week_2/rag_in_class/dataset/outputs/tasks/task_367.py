@@ -22,7 +22,7 @@ def is_tree_balanced(root):
 
     A tree is balanced if:
     1. The heights of the two child subtrees of any node differ by no more than 1.
-    2. Both child subtrees are balanced.
+    2. Both subtrees are themselves balanced.
 
     Args:
         root: The root node of the tree (or None for empty tree).

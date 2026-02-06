@@ -17,7 +17,7 @@ def smallest_multiple(n: int) -> int:
         return n
 
     i = n * 2
-    # Generate factors from n down to 3 (since 1 and 2 are already handled by n>=3)
+    # Generate factors from n down to 3 (since 1 and 2 are already handled by n*2)
     factors = [number for number in range(n, 2, -1) if number * 2 > n]
 
     while True:
