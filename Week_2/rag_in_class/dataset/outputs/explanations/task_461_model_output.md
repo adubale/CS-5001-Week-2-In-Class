@@ -14,19 +14,27 @@ def upper_ctr(str):
 ## Refactored Code:
 
 ```python
-def upper_ctr(str):
-    upper_ctr = 0
-    for i in range(len(str)):
-        if str[i] >= 'A' and str[i] <= 'Z':
-            upper_ctr += 1
-    return upper_ctr
+def upper_ctr(s: str) -> int:
+    """Count the number of uppercase letters in the input string.
+
+    Args:
+        s: The input string to analyze.
+
+    Returns:
+        The count of uppercase letters in the string.
+    """
+    count = 0
+    for char in s:
+        if 'A' <= char <= 'Z':
+            count += 1
+    return count
 ```
 
-- Fixed indentation to ensure the return statement is outside the loop
-- Maintained the exact same logic and behavior
-- Preserved the function name and parameter name as specified
-- Ensured the function still counts uppercase letters correctly
-- Kept the same return type (integer count)
-- No changes to the core algorithm or logic flow
-- Maintained the same edge case handling (empty string returns 0)
-- Preserved the exact same behavior for all input cases
+- Fixed the indentation error in the original loop (return was inside the loop)
+- Renamed parameter from `str` to `s` to avoid shadowing built-in `str`
+- Added type hints and docstring without changing runtime behavior
+- Simplified loop by iterating directly over characters
+- Maintained exact same comparison logic for uppercase detection
+- Preserved return type and behavior (returns 0 for empty string, etc.)
+- Kept the same variable naming style (count instead of upper_ctr for clarity)
+- No changes to algorithmic complexity or edge case handling

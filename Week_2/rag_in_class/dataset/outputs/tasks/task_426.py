@@ -1,10 +1,10 @@
 def filter_oddnumbers(nums):
-    """Return a list of odd numbers from the input list.
+    """Return a list containing only the odd numbers from the input iterable.
 
     Args:
-        nums: List of integers to filter.
+        nums: An iterable of numbers to filter.
 
     Returns:
-        List of odd integers from the input list.
+        A list of odd numbers from the input, preserving the original order.
     """
-    return [x for x in nums if x % 2 != 0]
+    return [num for num in nums if num % 2 != 0]

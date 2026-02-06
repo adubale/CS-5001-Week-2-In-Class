@@ -1,6 +1,12 @@
 def heap_sort(arr):
-    if not arr:
-        return arr
+    """Sort the input array in-place using heap sort algorithm.
+
+    Args:
+        arr: List of comparable elements to be sorted in ascending order.
+
+    Returns:
+        The sorted array (same object as input).
+    """
     heapify(arr)
     end = len(arr) - 1
     while end > 0:
@@ -10,19 +16,33 @@ def heap_sort(arr):
     return arr
 
 def heapify(arr):
-    start = (len(arr) - 1) // 2
+    """Convert the input array into a max-heap in-place.
+
+    Args:
+        arr: List to be transformed into a max-heap.
+    """
+    start = len(arr) // 2
     while start >= 0:
         shift_down(arr, start, len(arr) - 1)
         start -= 1
 
 def shift_down(arr, start, end):
+    """Perform a shift-down operation to maintain the max-heap property.
+
+    Args:
+        arr: The heap array.
+        start: Index of the element to shift down.
+        end: Last valid index in the heap.
+    """
     root = start
     while root * 2 + 1 <= end:
         child = root * 2 + 1
+        # Choose the larger child
         if child + 1 <= end and arr[child] < arr[child + 1]:
             child += 1
+        # Swap if root is smaller than the larger child
         if child <= end and arr[root] < arr[child]:
             arr[root], arr[child] = arr[child], arr[root]
             root = child
         else:
-            break
+            return

@@ -1,22 +1,16 @@
 import cmath
-import math
+from typing import Union
 
-def angle_complex(a, b):
-    """Calculate the phase angle of the complex number formed by a and b.
+def angle_complex(a: Union[int, float], b: Union[int, float]) -> float:
+    """Calculate the phase angle of the complex number formed by a + b.
 
     Args:
-        a: Real part of the complex number
-        b: Imaginary part of the complex number
+        a: Real part of the complex number.
+        b: Imaginary part of the complex number.
 
     Returns:
-        The phase angle in radians, precise to at least 15 decimal places
+        The phase angle in radians of the complex number (a + b).
     """
-    # Create the complex number from a and b
-    cn = complex(a, b)
-
-    # Calculate the phase angle using cmath.phase
-    # Note: cmath.phase handles all edge cases including zero magnitude
-    angle = cmath.phase(cn)
-
-    # Return the angle with full precision
+    complex_num = complex(a, b)
+    angle = cmath.phase(complex_num)
     return angle

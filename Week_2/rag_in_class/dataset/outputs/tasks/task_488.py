@@ -1,19 +1,16 @@
 import math
 
-def area_pentagon(a):
+def area_pentagon(a: float) -> float:
     """Calculate the area of a regular pentagon with side length a.
 
+    The formula used is:
+    area = (sqrt(5*(5 + 2*sqrt(5))) * a^2) / 4
+
     Args:
-        a: Side length of the pentagon (float or int)
+        a: Length of the pentagon's side (must be positive)
 
     Returns:
-        Area of the pentagon (float) with precision to at least 15 decimal places
+        The area of the regular pentagon
     """
-    # Validate input
-    if a <= 0:
-        return 0.0
-
-    # Calculate area using exact formula: (sqrt(5*(5+2*sqrt(5))) * a^2) / 4
-    # Using math.sqrt for precision and pow(a, 2) for exact squaring
     area = (math.sqrt(5 * (5 + 2 * math.sqrt(5))) * pow(a, 2)) / 4.0
     return area

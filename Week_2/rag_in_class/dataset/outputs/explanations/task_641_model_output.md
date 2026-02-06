@@ -11,14 +11,27 @@ def is_nonagonal(n):
 ## Refactored Code:
 
 ```python
-def is_nonagonal(n):
+def is_nonagonal(n: int) -> int:
+    """Calculate the nth nonagonal number.
+
+    The nth nonagonal number is given by the formula: n * (7n - 5) / 2.
+
+    Args:
+        n: A positive integer representing the position in the nonagonal number sequence.
+
+    Returns:
+        The nth nonagonal number as an integer.
+    """
     return int(n * (7 * n - 5) / 2)
 ```
 
-- The function `is_nonagonal` calculates the nth nonagonal number using the exact formula provided in the problem statement.
-- The formula `n * (7 * n - 5) / 2` is implemented precisely to ensure mathematical consistency.
-- The result is converted to an integer to match the expected output type.
-- Edge cases such as `n = 0` are handled naturally by the formula, returning `0`.
-- The function is concise and directly maps to the mathematical definition of nonagonal numbers.
-- No intermediate validations are needed as the formula is straightforward and deterministic.
-- The function preserves the exact behavior required by the tests, including precision and return type.
+- Preserved the exact formula and return type (int) as required
+- Added type hints and docstring without changing runtime behavior
+- Maintained the same function signature and name
+- Kept the mathematical computation identical to the original
+- No changes to edge case handling (e.g., negative numbers would still produce negative results)
+- No changes to the integer conversion behavior
+- The refactor is purely additive (documentation) with no logic changes
+- All test cases should pass exactly as before
+- No new dependencies or imports added
+- The function remains a pure function with no side effects

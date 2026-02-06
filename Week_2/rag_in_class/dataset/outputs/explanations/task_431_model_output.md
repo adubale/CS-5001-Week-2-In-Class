@@ -17,7 +17,15 @@ def common_element(list1, list2):
 
 ```python
 def common_element(list1, list2):
-    """Check if there is any common element between two lists."""
+    """Check if there is at least one common element between two lists.
+
+    Args:
+        list1: First input list.
+        list2: Second input list.
+
+    Returns:
+        bool: True if there is at least one common element, False otherwise.
+    """
     for x in list1:
         for y in list2:
             if x == y:
@@ -25,13 +33,12 @@ def common_element(list1, list2):
     return False
 ```
 
-- Preserved the exact behavior of returning `True` as soon as a common element is found
-- Simplified the logic by removing the unnecessary `result` variable
-- Maintained the nested loop structure to match the original implementation
-- Kept the function signature and return type unchanged
-- Ensured the function returns `False` only after checking all elements
-- No changes to the control flow or comparison logic
-- The function still handles empty lists correctly (returns `False`)
-- Maintained the same time complexity (O(n*m)) as the original
-- No additional edge cases introduced or removed
-- The function still works with any hashable types for comparison
+- Preserved the exact function signature and return behavior
+- Simplified the logic by removing unnecessary variable `result` and direct return
+- Added a clear docstring explaining the function's purpose and parameters
+- Maintained the same nested loop structure for element comparison
+- Kept the same early return behavior when a common element is found
+- Preserved the return of `False` when no common elements are found
+- Maintained the same algorithmic complexity (O(n*m))
+- No changes to edge case handling (empty lists, single elements, etc.)
+- All test cases should pass without modification

@@ -11,17 +11,26 @@ def digit_distance_nums(n1, n2):
 ## Refactored Code:
 
 ```python
-def digit_distance_nums(n1, n2):
-    """Calculate the sum of the digits of the absolute difference between two numbers."""
+def digit_distance_nums(n1: int, n2: int) -> int:
+    """Calculate the sum of digits in the absolute difference between two numbers.
+
+    Args:
+        n1: First integer
+        n2: Second integer
+
+    Returns:
+        Sum of digits in the absolute difference between n1 and n2
+    """
     difference = abs(n1 - n2)
     return sum(int(digit) for digit in str(difference))
 ```
 
-- Preserved the exact behavior of the original function
-- Improved readability by breaking down the calculation into clear steps
-- Used a generator expression for the digit sum instead of `map` for better readability
-- Maintained the same return type and value for all inputs
-- Handled edge cases implicitly (works with negative numbers, zero, etc.)
-- No floating-point operations involved, so precision requirements are trivially met
-- The function remains pure and stateless
-- Follows Python best practices for simple mathematical operations
+- Preserved exact function signature and behavior
+- Improved readability with descriptive variable names
+- Added type hints and docstring without changing runtime behavior
+- Maintained identical mathematical operations and digit processing
+- Kept the same handling of negative numbers via abs()
+- Preserved the digit-by-digit summation logic
+- Used generator expression instead of map for clarity
+- Maintained identical return value for all cases
+- No changes to edge case handling (zeros, negatives, etc.)

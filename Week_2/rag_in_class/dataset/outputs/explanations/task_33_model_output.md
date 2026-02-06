@@ -19,25 +19,33 @@ def decimal_To_Binary(N):
 ## Refactored Code:
 
 ```python
-def decimal_To_Binary(N):
-    if N == 0:
-        return 0
-    B_Number = 0
-    cnt = 0
+def decimal_To_Binary(N: int) -> int:
+    """Convert a decimal integer to its binary representation as an integer.
+
+    Args:
+        N: The decimal integer to convert (must be non-negative).
+
+    Returns:
+        The binary representation of N as an integer (e.g., 5 -> 101).
+    """
+    binary_number = 0
+    position = 0
+
     while N != 0:
-        rem = N % 2
-        B_Number += rem * (10 ** cnt)
+        remainder = N % 2
+        binary_number += remainder * (10 ** position)
         N = N // 2
-        cnt += 1
-    return B_Number
+        position += 1
+
+    return binary_number
 ```
 
-- Preserved exact behavior of converting decimal to binary as a decimal number
-- Added explicit handling for N=0 edge case
-- Improved variable naming and spacing for readability
-- Maintained the same calculation logic with precise integer operations
-- Ensured no floating-point operations that could introduce precision errors
-- Kept the same return type (integer) as original implementation
-- Maintained the same algorithmic approach (repeated division by 2)
-- Added proper spacing between operators for better readability
-- Kept the function name unchanged as required
+- Preserved exact function signature and behavior
+- Improved variable names for clarity (B_Number → binary_number, cnt → position)
+- Added docstring explaining purpose, parameters, and return value
+- Maintained identical logic and control flow
+- Kept same mathematical operations and order
+- Preserved handling of edge cases (N=0 returns 0)
+- No changes to return type or exception behavior
+- Maintained same algorithmic complexity (O(log N))
+- Added type hints without affecting runtime behavior

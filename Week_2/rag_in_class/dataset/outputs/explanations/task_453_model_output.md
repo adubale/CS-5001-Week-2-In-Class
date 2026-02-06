@@ -31,34 +31,53 @@ def sumofFactors(n) :
 ```python
 import math
 
-def sumofFactors(n):
+def sumofFactors(n: int) -> int:
+    """Calculate the sum of proper factors of n, with special handling for even numbers.
+
+    For odd numbers, returns 0. For even numbers, computes the sum of all proper factors
+    (excluding n itself) by factorizing n and applying the formula for sum of divisors.
+
+    Args:
+        n: The integer to factorize (must be non-negative)
+
+    Returns:
+        Sum of proper factors if n is even, 0 if n is odd
+    """
     if n % 2 != 0:
         return 0
-    res = 1
-    temp_n = n
-    for i in range(2, int(math.sqrt(temp_n)) + 1):
+
+    result = 1
+    remaining = n
+
+    for i in range(2, int(math.sqrt(remaining)) + 1):
         count = 0
-        curr_sum = 1
-        curr_term = 1
-        while temp_n % i == 0:
+        current_sum = 1
+        current_term = 1
+
+        while remaining % i == 0:
             count += 1
-            temp_n = temp_n // i
+            remaining = remaining // i
+
             if i == 2 and count == 1:
-                curr_sum = 0
-            curr_term *= i
-            curr_sum += curr_term
-        res *= curr_sum
-    if temp_n >= 2:
-        res *= (1 + temp_n)
-    return res
+                current_sum = 0
+
+            current_term *= i
+            current_sum += current_term
+
+        result *= current_sum
+
+    if remaining >= 2:
+        result *= (1 + remaining)
+
+    return result
 ```
 
-- Preserved the exact logic and behavior of the original function
-- Improved variable naming by using `temp_n` to avoid modifying the input parameter `n` directly
-- Maintained the same mathematical calculations and edge case handling
-- Ensured floating-point precision is not an issue as the function only deals with integer operations
-- Kept the same return type (integer) and handled all edge cases as in the original
-- The function still returns 0 for odd numbers and calculates the sum of factors correctly for even numbers
-- All intermediate calculations are preserved exactly as in the original implementation
-- The loop bounds and conditions remain unchanged to maintain the same behavior
-- The special case for i=2 and count=1 is preserved exactly as in the original
+- Preserved exact function signature and behavior for both even and odd inputs
+- Maintained the special case handling where the first factor of 2 makes current_sum = 0
+- Kept the mathematical algorithm and factorization logic identical
+- Improved variable names for clarity (res → result, n → remaining in loop)
+- Added type hints and docstring without changing runtime behavior
+- Maintained the same loop bounds and termination conditions
+- Preserved the final adjustment for remaining prime factors
+- Kept all numerical operations and order of operations unchanged
+- No changes to exception behavior (none in original implementation)

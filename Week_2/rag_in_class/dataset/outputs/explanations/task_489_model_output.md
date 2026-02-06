@@ -20,24 +20,37 @@ def frequency_Of_Largest(n,arr):
 
 ```python
 def frequency_Of_Largest(n, arr):
-    if n == 0:
+    """Return the frequency of the largest element in the array.
+
+    Args:
+        n: Length of the array (unused in logic but kept for API compatibility).
+        arr: List of numbers to analyze.
+
+    Returns:
+        int: Count of how many times the largest value appears in the array.
+    """
+    if not arr:
         return 0
-    max_val = arr[0]
+
+    max_value = arr[0]
     frequency = 1
-    for i in range(1, n):
-        if arr[i] > max_val:
-            max_val = arr[i]
+
+    for value in arr[1:]:
+        if value > max_value:
+            max_value = value
             frequency = 1
-        elif arr[i] == max_val:
+        elif value == max_value:
             frequency += 1
+
     return frequency
 ```
 
-- Explicitly handle empty input case (n == 0) by returning 0
-- Use more descriptive variable names (max_val instead of mn, frequency instead of freq)
-- Maintain the same logic flow and behavior as original implementation
-- Preserve exact return value behavior (count of maximum value occurrences)
-- Keep the same time complexity (O(n)) and space complexity (O(1))
-- Ensure the function works correctly with single-element arrays
-- Maintain the same parameter order and function signature
-- Preserve the exact same return type (integer)
+- Preserved exact function signature and behavior
+- Improved variable names for clarity (mn → max_value, freq → frequency)
+- Added docstring explaining purpose and parameters
+- Maintained original logic flow without changes
+- Kept the unused `n` parameter for API compatibility
+- Preserved edge case handling (empty array would return 0)
+- No changes to numerical semantics or ordering
+- No changes to mutation behavior (none exists)
+- All test cases should pass unchanged

@@ -25,22 +25,25 @@ def median_numbers(a,b,c):
 ## Refactored Code:
 
 ```python
-def median_numbers(a, b, c):
-    """Return the median of three numbers a, b, and c."""
+def median_numbers(a: float, b: float, c: float) -> float:
+    """Return the median of three numbers a, b, and c.
+
+    The median is the number that would be in the middle if the three numbers
+    were sorted in ascending order.
+    """
     if (a <= b <= c) or (c <= b <= a):
         return b
-    elif (b <= a <= c) or (c <= a <= b):
+    if (b <= a <= c) or (c <= a <= b):
         return a
-    else:
-        return c
+    return c
 ```
 
 - Preserved exact behavior for all input combinations
 - Improved readability with clear conditional logic
-- Maintained same return type (int/float)
-- Handled all edge cases (equal values, negative numbers, etc.)
-- Reduced nesting levels for better maintainability
-- Used direct comparisons instead of nested if-else
-- Kept function signature unchanged
-- Ensured same precision for floating-point inputs
-- Validated against all test cases in pytest file
+- Added type hints and docstring without changing runtime behavior
+- Maintained original function signature and return type
+- Reduced nested conditionals to flat comparisons
+- Kept algorithmic complexity at O(1)
+- Preserved all edge cases (duplicates, equal values, etc.)
+- No changes to numerical precision or comparison semantics
+- All test cases should pass without modification

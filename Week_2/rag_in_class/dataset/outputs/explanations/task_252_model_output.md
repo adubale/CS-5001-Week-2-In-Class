@@ -14,18 +14,27 @@ def convert(numbers):
 
 ```python
 import cmath
+from typing import Union, Tuple
 
-def convert(numbers):
-    """Convert a complex number to polar coordinates (magnitude, angle in radians)."""
-    magnitude, angle = cmath.polar(numbers)
-    return (magnitude, angle)
+def convert(numbers: Union[complex, float, int]) -> Tuple[float, float]:
+    """
+    Convert a complex number or real number to its polar form (magnitude, phase in radians).
+
+    Args:
+        numbers: A complex number or real number to convert.
+
+    Returns:
+        A tuple (magnitude, phase) representing the polar form of the input number.
+    """
+    magnitude, phase = cmath.polar(numbers)
+    return (magnitude, phase)
 ```
 
-- Preserved the exact behavior of the original function by using `cmath.polar` for conversion
-- Improved readability by explicitly unpacking the tuple returned by `cmath.polar`
-- Maintained the same return type (tuple of (magnitude, angle))
-- Ensured floating-point precision is handled by `cmath.polar` (which uses exact calculations)
-- Kept the function signature identical to avoid breaking existing code
-- Added a docstring to clarify the function's purpose
-- No edge cases to handle as `cmath.polar` works for all complex numbers
-- Return order matches the expected output (magnitude first, then angle)
+- Preserved the exact function signature and return type
+- Added type hints for better readability without changing behavior
+- Added a clear docstring explaining the function's purpose and parameters
+- Extracted the tuple unpacking into named variables for clarity
+- Maintained the exact same return structure (tuple of two floats)
+- Kept the use of cmath.polar() which is the core behavior
+- No changes to numerical precision or edge case handling
+- The refactored version is functionally identical to the original

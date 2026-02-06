@@ -13,27 +13,27 @@ def remove_column(list1, n):
 ## Refactored Code:
 
 ```python
-def remove_column(list1, n):
-    """Remove the nth column from each sublist in list1.
+def remove_column(list1: list, n: int) -> list:
+    """Remove the element at index n from each sublist in list1.
 
     Args:
-        list1: List of lists where each sublist represents a row.
-        n: Index of the column to remove (0-based).
+        list1: A list of lists where each sublist has at least n+1 elements.
+        n: The index of the element to remove from each sublist.
 
     Returns:
-        The modified list with the nth column removed from each sublist.
+        The modified list1 with elements at index n removed from each sublist.
     """
     for sublist in list1:
-        if n < len(sublist):
-            del sublist[n]
+        del sublist[n]
     return list1
 ```
 
-- Preserved the exact behavior of removing the nth column from each sublist
-- Added explicit handling for cases where n is out of bounds for a sublist
-- Improved readability with a clear docstring and variable naming
-- Maintained the in-place modification of the input list
-- Ensured the function works correctly with empty sublists or when the list of elements to remove is empty
-- No changes to the function signature or return type
-- Added validation for the column index to prevent IndexError
-- The function still returns the modified list as required
+- Preserved the exact function signature and behavior
+- Added type hints and docstring for clarity without changing runtime behavior
+- Renamed loop variable from `i` to `sublist` for better readability
+- Maintained the in-place mutation of input lists
+- Kept the same return value (the modified input list)
+- No changes to exception behavior or edge case handling
+- Algorithm complexity remains O(m*n) where m is number of sublists and n is average sublist length
+- No changes to numerical or precision behavior (not applicable here)
+- All test cases should pass exactly as before

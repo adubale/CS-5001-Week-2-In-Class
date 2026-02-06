@@ -12,17 +12,30 @@ def parabola_vertex(a, b, c):
 ## Refactored Code:
 
 ```python
-def parabola_vertex(a, b, c):
+def parabola_vertex(a: float, b: float, c: float) -> tuple[float, float]:
+    """Calculate the vertex (x, y) of a parabola defined by ax² + bx + c.
+
+    Args:
+        a: Coefficient of x² (must not be zero)
+        b: Coefficient of x
+        c: Constant term
+
+    Returns:
+        Tuple of (x, y) coordinates of the vertex
+
+    Raises:
+        ZeroDivisionError: If a is zero (parabola is not defined)
+    """
     x = -b / (2 * a)
-    y = (4 * a * c - b * b) / (4 * a)
+    y = ((4 * a * c) - (b ** 2)) / (4 * a)
     return (x, y)
 ```
 
-- Preserved exact mathematical formula for vertex calculation
-- Separated x and y calculations for clarity
-- Maintained tuple return type with (x, y) order
-- No rounding or precision loss in calculations
-- Handled edge cases implicitly (division by zero would raise exception as in original)
-- Preserved original function signature and name
-- Improved readability with clear variable names
-- Maintained exact floating-point precision requirements
+- Preserved exact mathematical formulas for vertex calculation
+- Added type hints and docstring without changing runtime behavior
+- Improved variable naming for clarity (x, y instead of vertex tuple)
+- Maintained original exception behavior (ZeroDivisionError when a=0)
+- Kept identical return structure (tuple of two floats)
+- No changes to function signature or return type
+- Mathematical operations remain in same order to preserve floating-point precision
+- No changes to edge case handling (e.g., negative values, zeros)
